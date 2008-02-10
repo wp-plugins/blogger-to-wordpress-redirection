@@ -22,10 +22,9 @@ Special Thanks to [Charles](http://charles.gagalac.us/). He helped me a lot whil
 == Installation ==
 
 **This plugin assumes following things:**
-
-    * You used wordpress blog importer while importing your blogspot beta blog.
-    * You put javascript or static link on your old blog to redirect visitors to your new blog. META tag redirect may not work.
-    * You have imported only one blog. In next version I will remove this restriction.
+* You used wordpress blog importer while importing your blogspot beta blog.
+* You put javascript or static link on your old blog to redirect visitors to your new blog. META tag redirect may not work.
+* You have imported only one blog. In next version I will remove this restriction.
 
 **Finally Installtion:**
 
@@ -36,8 +35,8 @@ Special Thanks to [Charles](http://charles.gagalac.us/). He helped me a lot whil
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 1. Thats All! All traffic will start redirecting automatically!
 
-**Extra**
-In case you are interested in redirection code I used on my old blog, its [here](http://www.devilsworkshop.org/pub/redirect.txt)! Trust me its one of the best! :-)
+**Extra Note:**
+* In case you are interested in redirection code I used on my old blog, its [here](http://www.devilsworkshop.org/pub/redirect.txt)! Trust me its one of the best! :-)
 
 
 In case you need more help, [visit plugin homepage](http://www.devilsworkshop.org/2008/01/19/blogger-to-wordpress-redirection-plugin-with-1-to-1-mapping-between-old-and-new-blog-posts/)!
@@ -45,11 +44,11 @@ In case you need more help, [visit plugin homepage](http://www.devilsworkshop.or
 
 == Frequently Asked Questions ==
 = Known Issue =
-The plugin have some conflict with Windows Live Writer. But there is temporory work arounf posted [here](http://www.devilsworkshop.org/2008/01/19/blogger-to-wordpress-redirection-plugin-with-1-to-1-mapping-between-old-and-new-blog-posts/)
+The plugin have some conflict with Windows Live Writer. But there is temporory work around posted [here](http://www.devilsworkshop.org/2008/01/19/blogger-to-wordpress-redirection-plugin-with-1-to-1-mapping-between-old-and-new-blog-posts/)
  
 
 == Screenshots ==
 
-1. Following screenshot shows the differnce in traffic movement redirection after this plugin has been installed.
+1. Above screenshot shows the differnce in traffic movement redirection after this plugin has been installed.
 
 
