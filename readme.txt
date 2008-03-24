@@ -22,6 +22,7 @@ Special Thanks to [Charles](http://charles.gagalac.us/). He helped me a lot whil
 == Installation ==
 
 **This plugin assumes following things:**
+
 * You used wordpress blog importer while importing your blogspot beta blog.
 * You put javascript or static link on your old blog to redirect visitors to your new blog. META tag redirect may not work.
 * You have imported only one blog. In next version I will remove this restriction.
@@ -48,8 +49,8 @@ The plugin have some conflict with Windows Live Writer. But there is temporory w
  
 = changelog =
 -v 1.1
--- A bug earlier prevented this plugin to work for wordpress blogs in subdirectories like http://www.anilwasghule.com/blog
--- Also added piority value to supress haeadr already sent message. Hope this will work now.
+* A bug earlier prevented this plugin to work for wordpress blogs in subdirectories like http://www.anilwasghule.com/blog
+* Also added piority value to supress haeadr already sent message. Hope this will work now.
 
 == Screenshots ==
 
