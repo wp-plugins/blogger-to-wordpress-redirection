@@ -27,7 +27,7 @@ $oldBlogURL = "rb286.blogspot.com";
 global $wpdb;
 //echo $oldBlogURL;
 //following is to avoid infinite redirection problem
-if( is_home() ){
+if( strcmp( $_SERVER['REQUEST_URI'] , "/" ) == 0 ){
    //We are on Home Page
 	$ref = $_SERVER['HTTP_REFERER'];
 	$refarr = explode("/", $ref);
