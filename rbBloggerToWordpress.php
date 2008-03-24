@@ -52,5 +52,5 @@ if( is_home() ){
 ?>
 
 <?php
-add_action('wp_head','rbBloggerToWordpress', '1');
+add_action('init','rbBloggerToWordpress', '1');
 ?>
