@@ -3,7 +3,7 @@ Plugin Name: Blogger To Wordpress Redirection
 Tags: Wordpress, Blogger, Traffic, Redirection
 Requires at least: 2.0.2
 Tested up to: 2.5
-Stable tag: 1.1
+Stable tag: 1.1.1
 
 This plugin manages 1-2-1 mapping between old blogspot blog and this Wordpress blog transparently.
 
