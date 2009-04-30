@@ -42,16 +42,16 @@ Special Thanks to [Charles](http://charles.gagalac.us/). He helped me a lot whil
 * In case you are interested in redirection code I used on my old blog, its [here](http://www.devilsworkshop.org/pub/redirect.txt)! Trust me its one of the best! :-)
 
 
-In case you need more help, [visit plugin homepage](http://www.devilsworkshop.org/2008/01/19/blogger-to-wordpress-redirection-plugin-with-1-to-1-mapping-between-old-and-new-blog-posts/)!
+In case you need more help, [visit plugin homepage](http://www.devilsworkshop.org/blogger-to-wordpress-traffic-permalinks-redirection-plugin/)!
 
 
 == Frequently Asked Questions ==
 = Known Issue =
-The plugin have some conflict with Windows Live Writer. But there is temporory work around posted [here](http://www.devilsworkshop.org/2008/01/19/blogger-to-wordpress-redirection-plugin-with-1-to-1-mapping-between-old-and-new-blog-posts/)
+The plugin have some conflict with Windows Live Writer. But there is temporory work around posted [here](http://www.devilsworkshop.org/blogger-to-wordpress-traffic-permalinks-redirection-plugin/)
  
 = Changelog =
 -v 1.2
-* Removed some whitespace to fix error : “Cannot modify header information - headers already sent by”
+* Removed some whitespace to fix error : "Cannot modify header information - headers already sent by"
 
 -v 1.1
 
