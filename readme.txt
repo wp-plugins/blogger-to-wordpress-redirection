@@ -1,9 +1,10 @@
 === Plugin Name ===
+Contributors: rahul286, rtcamp 
 Plugin Name: Blogger To Wordpress Redirection
-Tags: Wordpress, Blogger, Traffic, Redirection
+Tags: Wordpress, Blogger, Traffic, Redirection, Blogspot, Permalink, SEO
 Requires at least: 2.0.2
-Tested up to: 2.7.1
-Stable tag: 1.1.2
+Tested up to: 3.0.1
+Stable tag: 1.1.3
 
 This plugin manages 1-2-1 mapping between old blogspot blog and this Wordpress blog transparently.
 
@@ -16,6 +17,8 @@ So this plugin just takes care of this part. It checks for which post people wer
 DO NOT forget to read Installation section. Its simple but slightly different.
 
 If you stuck somewhere you can [visit plugin homepage](http://www.devilsworkshop.org/blogger-to-wordpress-traffic-permalinks-redirection-plugin/) to leave comment or buzz me! :-)
+
+OR you can simply go for our [Blogger to WordPress Migration Service](http://bloggertowp.org/)
 
 Special Thanks to [Charles](http://charles.gagalac.us/). He helped me a lot while debugging code on #wordpress IRC channel.
 
@@ -39,7 +42,7 @@ Special Thanks to [Charles](http://charles.gagalac.us/). He helped me a lot whil
 
 **Extra Note:**
 
-* In case you are interested in redirection code I used on my old blog, its [here](http://www.devilsworkshop.org/pub/redirect.txt)! Trust me its one of the best! :-)
+* In case you are interested in redirection code I used on my old blog, its [here](http://pub.rtcamp.net/redirect.txt)! Trust me its one of the best! :-)
 
 
 In case you need more help, [visit plugin homepage](http://www.devilsworkshop.org/blogger-to-wordpress-traffic-permalinks-redirection-plugin/)!
