@@ -5,7 +5,7 @@ Plugin Name: Blogger To WordPress Redirection Plugin
 Tags: Wordpress, Blogger, Traffic, Redirection, Blogspot, Permalink, SEO, rel-canonical, meta-refresh
 Requires at least: 2.0.2
 Tested up to: 3.0.3
-Stable tag: 2.0
+Stable tag: 2.0.1
 
 This plugin automates setting up 1-to-1 mapping between Blogger.com (blogspot) blog posts and your new WordPress blog posts. 
 
