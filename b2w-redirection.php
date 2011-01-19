@@ -3,7 +3,7 @@
 Plugin Name: Blogger To Wordpress Redirection
 Plugin URI: http://bloggertowp.org/blogger-to-wordpress-redirection-plugin/
 Description: This plugin is useful for setting up 1-to-1 mapping between Blogger.com blog posts and WordPress blog posts. This works nicely for blogs with old subdomain address (e.g. xyz.blogspot.com) which are moved to new custom domain (e.g. xyz.com)
-Version: 2.0.1
+Version: 2.0.2
 Author: rtCamp
 Author URI: http://bloggertowp.org
 */
@@ -15,10 +15,10 @@ define('RT_B2WR_PLUGIN_URL', WP_PLUGIN_URL .'/'. basename(dirname(__FILE__)));
 add_action('admin_menu', 'rt_Blogger_to_Wordpress_add_option');
 function rt_Blogger_to_Wordpress_add_option() {
 	add_management_page('Blogger To Wordpress Redirection', 'Blogger To WordPress Redirection', 8, 'rt-blogger-to-wordpress-redirection', 'rt_Blogger_to_Wordpress_Administrative_Page');
-        wp_enqueue_style('dashboard');
-	wp_enqueue_script('rt-blogger-to-wordpress-redirection-js', (RT_B2WR_PLUGIN_URL .'/js/b2w-redirection-ajax.js'), array('jquery','postbox','dashboard'), '', true );
+        wp_enqueue_script('rt-blogger-to-wordpress-redirection-js', (RT_B2WR_PLUGIN_URL .'/js/b2w-redirection-ajax.js'), array('jquery','postbox'), '', true );
 	wp_enqueue_script('rt-fb-share', ('http://static.ak.fbcdn.net/connect.php/js/FB.Share'),'', '', true );
 wp_enqueue_style('rt-blogger-to-wordpress-redirection-css', (RT_B2WR_PLUGIN_URL.'/css/b2w-redirection.css'));
+if ($_GET['page'] == 'rt-blogger-to-wordpress-redirection'){ wp_enqueue_script('dashboard'); wp_enqueue_style('dashboard');}
 }
 /* Add option to Tools Menu - End (RT) */
 
