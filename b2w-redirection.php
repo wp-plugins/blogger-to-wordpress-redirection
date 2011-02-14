@@ -3,7 +3,7 @@
 Plugin Name: Blogger To Wordpress Redirection
 Plugin URI: http://bloggertowp.org/blogger-to-wordpress-redirection-plugin/
 Description: This plugin is useful for setting up 1-to-1 mapping between Blogger.com blog posts and WordPress blog posts. This works nicely for blogs with old subdomain address (e.g. xyz.blogspot.com) which are moved to new custom domain (e.g. xyz.com)
-Version: 2.0.2
+Version: 2.0.3
 Author: rtCamp
 Author URI: http://bloggertowp.org
 */
@@ -234,4 +234,19 @@ function rt_Get_Feeds_From_Blogger2WP() {
 	<?php
 }
 /* Get Latest Feeds from bloggertowp.org - End (RT) */
+
+/* Update Notice - Begin (RT) */
+function rt_Blogger_to_Wordpress_Update_Notice() {
+  if(!get_option('rtb2wr203') || get_option('rtb2wr203') == '') {
+    echo '<div id="b2wr_notice_block" class="error"><p>Blogger to WordPress Redirection plugin has been updated recently. Please <a href="'.get_admin_url().'tools.php?page=rt-blogger-to-wordpress-redirection">Run Configuration Wizard</a> to activate new redirection codes. <a class="blue_color" href="http://bloggertowp.org/update-version-of-blogger-to-wordpress-redirection-plugin/" target="_blank" title="Read more details about this update at Our Blog">(Read More…)</a><span><input type="button" id="hide_b2wr_notice_block" value="Hide this message!" class="button"></span></p></div>';
+  }
+}
+add_action('admin_notices', 'rt_Blogger_to_Wordpress_Update_Notice', 5);
+
+
+add_action('wp_ajax_rt_b2wr_hide_notice_block', 'rt_b2wr_hide_notice_block');
+function rt_b2wr_hide_notice_block(){
+	update_option('rtb2wr203','done');
+}
+/* Update Notice - End (RT) */
 ?>
