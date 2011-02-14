@@ -23,7 +23,7 @@ function generate_code(num, domain_name, curr_domain){
 <title><$BlogPageTitle$></title>\n\
 <script type="text/javascript">\n\
 <!--\n\
-	<MainOrArchivePage>window.location.replace("'+curr_domain+'/");</MainOrArchivePage>\n\
+	<MainOrArchivePage>window.location.replace("'+curr_domain+'/"+window.location.pathname);</MainOrArchivePage>\n\
 	<Blogger><ItemPage>window.location.replace("'+curr_domain+'/?b2w=<$BlogItemPermalinkURL$>");<\/ItemPage><\/Blogger>\n\
 -->\n\
 <\/script>\n\
@@ -56,3 +56,14 @@ function check_configuration(domain_name){
 		}
 	});
 }
+
+jQuery('#hide_b2wr_notice_block').click(function() {
+	jQuery.ajax({
+		url:'admin-ajax.php',
+		type: 'POST',
+		data: 'action=rt_b2wr_hide_notice_block',
+		success: function(result){
+			jQuery('#b2wr_notice_block').slideUp('slow','linear');
+		}
+	});
+});
