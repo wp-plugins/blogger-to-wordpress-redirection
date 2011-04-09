@@ -3,7 +3,7 @@
 Plugin Name: Blogger To Wordpress Redirection
 Plugin URI: http://bloggertowp.org/blogger-to-wordpress-redirection-plugin/
 Description: This plugin is useful for setting up 1-to-1 mapping between Blogger.com blog posts and WordPress blog posts. This works nicely for blogs with old subdomain address (e.g. xyz.blogspot.com) which are moved to new custom domain (e.g. xyz.com)
-Version: 2.0.3
+Version: 2.0.4
 Author: rtCamp
 Author URI: http://bloggertowp.org
 */
@@ -14,11 +14,11 @@ define('RT_B2WR_PLUGIN_URL', WP_PLUGIN_URL .'/'. basename(dirname(__FILE__)));
 /* Add option to Tools Menu - Begin (RT) */
 add_action('admin_menu', 'rt_Blogger_to_Wordpress_add_option');
 function rt_Blogger_to_Wordpress_add_option() {
-	add_management_page('Blogger To Wordpress Redirection', 'Blogger To WordPress Redirection', 8, 'rt-blogger-to-wordpress-redirection', 'rt_Blogger_to_Wordpress_Administrative_Page');
+	add_management_page('Blogger To Wordpress Redirection', 'Blogger To WordPress Redirection', 'administrator', 'rt-blogger-to-wordpress-redirection', 'rt_Blogger_to_Wordpress_Administrative_Page');
         wp_enqueue_script('rt-blogger-to-wordpress-redirection-js', (RT_B2WR_PLUGIN_URL .'/js/b2w-redirection-ajax.js'), array('jquery','postbox'), '', true );
 	wp_enqueue_script('rt-fb-share', ('http://static.ak.fbcdn.net/connect.php/js/FB.Share'),'', '', true );
 wp_enqueue_style('rt-blogger-to-wordpress-redirection-css', (RT_B2WR_PLUGIN_URL.'/css/b2w-redirection.css'));
-if ($_GET['page'] == 'rt-blogger-to-wordpress-redirection'){ wp_enqueue_script('dashboard'); wp_enqueue_style('dashboard');}
+if (isset($_GET['page']) && $_GET['page'] == 'rt-blogger-to-wordpress-redirection'){ wp_enqueue_script('dashboard'); wp_enqueue_style('dashboard');}
 }
 /* Add option to Tools Menu - End (RT) */
 
@@ -51,6 +51,14 @@ function rt_Blogger_to_Wordpress_Administrative_Page() {
                                 <a href="http://www.facebook.com/BloggertoWordpress" target="_blank" title="Become a fan on Facebook"><img src="<?php echo RT_B2WR_PLUGIN_URL; ?>/images/facebook.png" alt="Twitter" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a href="http://twitter.com/bloggertowp" target="_blank" title="Follow us on Twitter"><img src="<?php echo RT_B2WR_PLUGIN_URL; ?>/images/twitter.png" alt="Facebook" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a href="http://feeds.feedburner.com/Blogger-to-Wordpress" target="_blank" title="Subscribe to our feeds"><img src="<?php echo RT_B2WR_PLUGIN_URL; ?>/images/rss.png" alt="RSS Feeds" /></a>
+                            </div>
+                        </div>
+
+			<div class="postbox" id="joinfb">
+                            <div title="Click to toggle" class="handlediv"><br></div>
+                            <h3 class="hndle"><span><strong class="red">Join Us on FaceBook</strong></span></h3>
+                            <div class="inside" style="text-align:center;">
+				<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FBloggertoWordpress&amp;width=251&amp;height=178&amp;connections=4&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:251px; height:178px"></iframe> 
                             </div>
                         </div>
 
@@ -237,7 +245,7 @@ function rt_Get_Feeds_From_Blogger2WP() {
 
 /* Update Notice - Begin (RT) */
 function rt_Blogger_to_Wordpress_Update_Notice() {
-  if(!get_option('rtb2wr203') || get_option('rtb2wr203') == '') {
+  if(!get_option('rtb2wr204') || get_option('rtb2wr204') == '') {
     echo '<div id="b2wr_notice_block" class="error"><p>Blogger to WordPress Redirection plugin has been updated recently. Please <a href="'.get_admin_url().'tools.php?page=rt-blogger-to-wordpress-redirection">Run Configuration Wizard</a> to activate new redirection codes. <a class="blue_color" href="http://bloggertowp.org/update-version-of-blogger-to-wordpress-redirection-plugin/" target="_blank" title="Read more details about this update at Our Blog">(Read More…)</a><span><input type="button" id="hide_b2wr_notice_block" value="Hide this message!" class="button"></span></p></div>';
   }
 }
@@ -246,7 +254,7 @@ add_action('admin_notices', 'rt_Blogger_to_Wordpress_Update_Notice', 5);
 
 add_action('wp_ajax_rt_b2wr_hide_notice_block', 'rt_b2wr_hide_notice_block');
 function rt_b2wr_hide_notice_block(){
-	update_option('rtb2wr203','done');
+	update_option('rtb2wr204','done');
 }
 /* Update Notice - End (RT) */
 ?>
