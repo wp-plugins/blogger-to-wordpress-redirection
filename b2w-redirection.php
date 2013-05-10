@@ -3,11 +3,11 @@
 Plugin Name: Blogger To Wordpress
 Plugin URI: http://rtcamp.com/tutorials/blogger-to-wordpress-redirection-plugin/
 Description: This plugin is useful for setting up 1-to-1 mapping between Blogger.com blog posts and WordPress blog posts. This works nicely for blogs with old subdomain address (e.g. xyz.blogspot.com) which are moved to new custom domain (e.g. xyz.com)
-Version: 2.1
+Version: 2.2
 Author: rtCamp
 Author URI: http://rtcamp.com/
 Requires at least: 3.0
-Tested up to: 3.4.2
+Tested up to: 3.5.1
 */
 
 define('RT_B2WR_PLUGIN_URL', WP_PLUGIN_URL .'/'. basename(dirname(__FILE__)));
@@ -40,6 +40,7 @@ function rt_Blogger_to_Wordpress_Administrative_Page() {
         
         <div id="content_block" class="align_left">
             <p class="description">This plugin is useful for setting up 1-to-1 mapping between Blogger.com blog posts and WordPress blog posts. This works nicely for blogs with old subdomain address <code>(e.g. xyz.blogspot.com)</code> which are moved to new custom domain <code>(e.g. xyz.com)</code></p>
+            <div id="message" class="error"><p>Please keep this plugin <strong>activated</strong> for redirection to work.</p></div>
             <h3><u>Start Configuration</u></h3>
             <h4>Press "Start Configuration" button to generate code for Blogger.com blog</h4>
             <p>Plugin will automatically detect Blogger.com blog from where you have imported.</p>
@@ -171,6 +172,9 @@ function rt_Blogger_To_Wordpress_Redirection() {
                         if (strstr($b2w, $result->meta_value) !== false) {
 				$b2w_temp = explode($result->meta_value, $b2w);
 				$b2w = substr($b2w_temp[1], strpos($b2w_temp[1], '/'));
+                if(strpos($b2w,'?') > 0){
+                    $b2w = strstr($b2w,'?',true);
+                }
 			}
 
 			$sqlstr = "SELECT wposts.ID, wposts.guid
@@ -243,7 +247,7 @@ function rt_Blogger_to_Wordpress_Update_Notice() {
         echo '<div id="b2wr_notice_block" class="error"><p>Due to recent updates on blogger.com, Blogger to WordPress Redirection plugin has been rewritten. The process has also changed completely. Please refer the updated instructions here: <a class="blue_color" href="http://rtcamp.com/tutorials/blogger-to-wordpress-redirection-plugin/" target="_blank" title="Read more details about this update at Our Blog">(Read More…)</a><span><input type="button" id="hide_b2wr_notice_block" value="Hide this message!" class="button"></span></p></div>';
     }
 }
-add_action('admin_notices', 'rt_Blogger_to_Wordpress_Update_Notice', 5);
+//add_action('admin_notices', 'rt_Blogger_to_Wordpress_Update_Notice', 5);
 
 function rt_b2wr_hide_notice_block() {
     update_option('rtb2wr206', 'done');

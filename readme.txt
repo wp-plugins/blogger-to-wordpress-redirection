@@ -1,9 +1,9 @@
 === Blogger To WordPress ===
-Contributors: rtcamp, rahul286, rakshit, saurabhshukla
+Contributors: rtcamp, rahul286, rakshit, saurabhshukla, faishal
 Tags: Wordpress, Blogger, Traffic, Redirection, Blogspot, Permalink, SEO, rel-canonical, meta-refresh
 Requires at least: 3.2
-Tested up to: 3.4.2
-Stable tag: 2.1
+Tested up to: 3.5.1
+Stable tag: 2.2
 License: GPLv2 or later (of-course)
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: http://rtcamp.com/donate/
@@ -48,6 +48,11 @@ If your have any other question, [use our support forum](http://rtcamp.com/suppo
 You can find [screenshots here](http://rtcamp.com/tutorials/blogger-to-wordpress-redirection-plugin/).
 
 == Changelog ==
+= 2.2 =
+
+* Fixed redirection of mobile template url.
+* Add Warning to keep plugin active for redirection to work 
+
 = 2.1 =
 
 * Code rewritten to confirm to the latest templating system of Blogger. If you are using the old/classic templates, please upgrade to the new template system before using this plugin.
