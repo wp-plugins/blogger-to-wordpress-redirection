@@ -32,7 +32,7 @@ You may also consider using our [Blogger To WordPress Migration Service](http://
  
 = Video Guide =
 
-https://www.youtube.com/watch?v=oinLz8-Wc4I
+http://www.youtube.com/watch?v=oinLz8-Wc4I
 
 == Installation ==
 
